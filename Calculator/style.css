@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* A slightly more modern font */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a0a24; /* Deep purple background */
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+  /* Adding a subtle shadow for depth */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  border-radius: 10px; /* Rounded corners for a softer look */
+  overflow: hidden; /* Ensures child elements conform to border-radius */
+}
+
+.calculator .value {
+  grid-column: span 4;
+  height: 100px;
+  width: 240px; /* Fixed width to contain the buttons */
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px; /* Larger font for readability */
+  background: #2a1a36; /* Darker display background */
+  color: #e0f7fa; /* Light cyan text for a digital feel */
+  letter-spacing: 1px;
+}
+
+.calculator span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  background: #3a2c46; /* Base button color */
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #f5f5f5;
+  cursor: pointer;
+  font-weight: 600;
+  /* Smooth transition for hover and active effects */
+  transition: background 0.2s ease-in-out;
+}
+
+/* INTERACTIVE HOVER EFFECT */
+.calculator span:hover {
+  background: #4e3a5e; /* Lighter purple on hover */
+}
+
+.calculator span:active {
+  background: #ff4081; /* Bright magenta when pressed */
+  color: #fff;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 120px;
+  background: #c31d5b; /* Deep pink/red for clear */
+  color: #fff;
+}
+.calculator span.clear:hover {
+  background: #d82a6b;
+}
+
+.calculator span.plus {
+  grid-row: span 2;
+  height: 120px;
+  background: #7b1fa2; /* Vibrant purple for operators */
+  color: #fff;
+}
+.calculator span.plus:hover {
+  background: #8e24aa;
+}
+
+.calculator span.equal {
+  background: #00bcd4; /* Bright cyan for equal */
+  color: #1a0a24; /* Dark text for high contrast */
+}
+.calculator span.equal:hover {
+  background: #26c6da;
+}
